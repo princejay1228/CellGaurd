@@ -4,16 +4,16 @@
 
 @layer base {
   :root {
-    --color-bg: #060913;
-    --color-card: #0c1322;
-    --color-border: #1e293b;
-    --color-cyan: #00f2fe;
-    --color-violet: #7928ca;
+    --color-bg: #0a0806;
+    --color-card: #141008;
+    --color-border: #2d2215;
+    --color-red: #dc2626;
+    --color-gold: #d4a017;
   }
 
   body {
-    background-color: #060913;
-    color: #f1f5f9;
+    background-color: #0a0806;
+    color: #f5f0e8;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
   }
@@ -23,20 +23,19 @@
   }
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #090e1c;
+  background: #0d0a04;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #2d2215;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #44361f;
 }
 
 @keyframes fadeIn {

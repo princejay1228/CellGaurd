@@ -78,7 +78,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#060913] text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#0a0806] text-stone-100 flex flex-col font-sans selection:bg-red-950 selection:text-red-200">
       {/* Top Command Bar */}
       <Navbar
         activeTab={activeTab}
@@ -163,11 +163,11 @@ export function App() {
       />
 
       {/* Footer Status Bar */}
-      <footer className="border-t border-slate-900 bg-[#04060d] px-4 py-2.5 text-center text-xs font-mono text-slate-500">
+      <footer className="border-t border-stone-800/80 bg-[#070503] px-4 py-2.5 text-center text-xs font-mono text-stone-500">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <span>CellGuard AI • Lithium-Ion Multi-Model Debate & BMS Command Centre</span>
+          <span>CellGuard AI • Lithium-Ion Real-Time BMS & Debate Intelligence</span>
           <span>
-            Storage: IndexedDB (Dexie.js) • Models: 4 Agents + Nemotron 3 Ultra 550B • Vercel Ready
+            IndexedDB (Dexie.js) • NVIDIA NIM Models (Agent 1-4 + Nemotron) • Real Telemetry
           </span>
         </div>
       </footer>

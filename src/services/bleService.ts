@@ -24,7 +24,7 @@ class BLEService {
   private status: ESP32Status = {
     connected: false,
     mode: 'ble',
-    isSimulating: true,
+    isSimulating: false,
   };
 
   public isBluetoothSupported(): boolean {
@@ -64,7 +64,7 @@ class BLEService {
       this.device.addEventListener('gattserverdisconnected', () => {
         console.warn('[BLE] ESP32 Disconnected!');
         this.status.connected = false;
-        this.status.isSimulating = true;
+        this.status.isSimulating = false;
         this.notifyStatus();
       });
 
@@ -102,7 +102,7 @@ class BLEService {
     } catch (err: any) {
       console.error('[BLE Error]', err);
       this.status.connected = false;
-      this.status.isSimulating = true;
+      this.status.isSimulating = false;
       this.notifyStatus();
       throw err;
     }
@@ -113,7 +113,7 @@ class BLEService {
       await this.device.gatt.disconnect();
     }
     this.status.connected = false;
-    this.status.isSimulating = true;
+    this.status.isSimulating = false;
     this.device = null;
     this.server = null;
     this.telemetryChar = null;
